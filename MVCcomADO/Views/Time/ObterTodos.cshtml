@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MVCcomADO.Models.Time>
+
+<p>
+    @Html.ActionLink("Create New", "IncluirTime")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cores)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cores)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditarTime", new { id = item.id }) |
+            @Html.ActionLink("Details", "ObterPorId", new { id = item.id }) |
+            @Html.ActionLink("Delete", "ExlcuirTime", new { id = item.id } ,  new { onclick = "return confirm('Are sure wants to delete?');" })           
+        </td>
+    </tr>
+}
+
+</table>

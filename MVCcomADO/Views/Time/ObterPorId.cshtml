@@ -1,0 +1,36 @@
+﻿@model MVCcomADO.Models.Time
+
+<div>
+    <h4>Time</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cores)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cores)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditarTime", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "ObterTodos")
+</p>
